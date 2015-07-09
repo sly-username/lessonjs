@@ -4,6 +4,7 @@
 
 * [MDN Tutorials](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) <-- Good place to start learning syntax
 * [Stackoverflow is a great resource](http://stackoverflow.com/questions/3970961/getting-started-with-javascript)
+* [An e-book of the definitive guide](JavaScript_The_Definitive_Guide_Sixth_Edition.pdf)
 * [idiomatic.js](https://github.com/rwaldron/idiomatic.js/) <-- We follow this JS code styleguide
 * [Streams! (read after assessment)](https://github.com/substack/stream-handbook)
 
