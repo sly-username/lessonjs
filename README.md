@@ -13,7 +13,7 @@
 1. Set up NVM (https://github.com/creationix/nvm)
 2. Install latest version of node (`nvm install 0.12`)
 3. Alias that as the "default" node (`nvm alias default 0.12`)
-4. Clone this repo! (using SSH of course: git@github.com:eardish/lesson-js.git)
+4. Clone this repo! (using SSH of course: `git@github.com:eardish/lesson-js.git`)
 5. Create a branch for yourself (use your name for the branch name)
 6. [Clone this assessment repo](https://github.com/rmurphey/js-assessment)
   1. Follow the instructions in https://github.com/rmurphey/js-assessment
