@@ -146,7 +146,7 @@ Feel free to bring in other NPM modules to spice things up (but again, not a ser
 
 #### For [Cake Theif Qeustion](https://www.interviewcake.com/question/cake-thief) #####
 
-You will need to support the same three APIs described above but with the input of "cakeTuples" and "capacity" Example usage:
+You will need to support the same three APIs described above but with the input of "cakes" and "capacity" Example usage:
 
 ##### CLI #####
 
