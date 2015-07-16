@@ -1,14 +1,16 @@
 'use strict';
 
 module.exports = function( a ) {
-  var b = a.replace( /\W/g, '' ).toLowerCase(),
-    length = b.length,
-    i = 0;
-  for ( ; i < Math.floor( length/2 ); i++ ) {
-    if ( b[ i ] !== b[ length - 1 - i ]) {
-      console.log( a + ' is not a palindrome' );
-      return false;
-    }
+  var b = a.toString().replace( /\W/g, '' ).toLowerCase(),
+    c = a.toString().split( /\b/ ).reverse().join( '' );
+  console.log( a.toString() );
+
+  if ( a === c ) {
+    console.log( a + ' is a palindrome (strict)' );
   }
-  console.log( a  + ' is a palindrome' );
+
+  if ( b === b.split ( '' ).reverse ().join ( '' ) && a !== c ) {
+    console.log ( a + ' is a palindrome (ignore spaces)' );
+  }
+
 };
