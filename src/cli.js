@@ -1,13 +1,18 @@
 'use strict';
 
-var panama = require('./src/panama');
+var panama = require('./panama' ),
+  inputsArray = process.argv.slice( 2 );
 
-exports.module = function() {
-  process.argv.forEach( function( val, index, inputsArr ) {
-    console.log ( index + ': ' + val );
+inputsArray.forEach( function( input ) {
+  return panama( input );
+});
 
-    return inputsArr.map ( function ( input ) {
-      return panama ( input );
-    } );
-  });
-};
+//module.exports = function() {
+  //process.argv.forEach( function( val, index, inputsArr ) {
+  //  console.log ( index + ': ' + val );
+  //
+  //  return inputsArr.map ( function ( input ) {
+  //    return panama ( input, true );
+  //  } );
+  //});
+//};
