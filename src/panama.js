@@ -10,5 +10,5 @@ module.exports = function( a ) {
       return false;
     }
   }
-  console.log(  + ' is a palindrome' );
+  console.log( a  + ' is a palindrome' );
 };
