@@ -12,12 +12,12 @@ module.exports = function( a ) {
   if ( a === b ) {
     console.log( chalk.green( a + ' is a palindrome (strict)' ));
   } else {
-    console.log( chalk.red( a + ' is NOT a palindrome (strict)' ));
+    console.log( chalk.red.strikethrough( a ) + chalk.red( ' is NOT a palindrome (strict)' ));
   }
 
   if ( a.replace( /\s/g, '' ) === c ) {
     console.log( chalk.green( a + ' is a palindrome (ignore spaces)' ));
   } else {
-    console.log( chalk.red( a + ' is a NOT palindrome (ignore spaces)' ));
+    console.log( chalk.red.strikethrough( a ) + chalk.red( ' is a NOT palindrome (ignore spaces)' ));
   }
 };

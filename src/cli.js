@@ -6,15 +6,3 @@ var panama = require('./panama' ),
 inputsArray.forEach( function( input ) {
   return panama( input );
 });
-
-//process.argv.forEach( function( val, index, inputsArr ) {
-//  console.log ( index + ': ' + val );
-//
-//  return inputsArr.map ( function ( input ) {
-//    return panama ( input, true );
-//  } );
-//});
-
-module.exports = function() {
-  return 'results';
-};
