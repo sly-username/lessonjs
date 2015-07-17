@@ -1,33 +1,23 @@
 'use strict';
 
+var chalk = require( 'chalk' );
+
 module.exports = function( a ) {
-  var b = a.toLowerCase(),
-    c = a.replace( /\W/g, '' ).toLowerCase(),
-    length = b.length,
-    half = Math.floor( length/2 ),
-    i = 0;
+  var b = a.split( '' ).reverse().join ( '' ),
+    c = a.replace( /\s/g, '' ).split( '' ).reverse().join ( '' );
 
-  for ( ; i < half ; i++ ) {
-    console.log( b );
-    if ( b[ i ] !== b[ length - 1 - i ]) {
-      console.log( a + ' is not a palindrome (strict)' );
-      return false;
-    } else {
-      console.log( a + ' is a palindrome (strict)' );
-      return false;
-    }
+  console.log( '' );
+  console.log( chalk.cyan.bold( a ));
 
-
-    //else if ( c !== c[ length - 1 - i ]) {
-    //  console.log( a + ' is not a palindrome (ignore spaces)' );
-    //  return false;
-    //} else if ( b[ i ] === b[ length - 1 - i ]) {
-    //  console.log( a + ' is a palindrome (strict)' );
-    //  return false;
-    //} else
-    //} else {
-    //  console.log( a  + ' is a palindrome' );
-    //}
+  if ( a === b ) {
+    console.log( chalk.green( a + ' is a palindrome (strict)' ));
+  } else {
+    console.log( chalk.red( a + ' is NOT a palindrome (strict)' ));
   }
 
+  if ( a.replace( /\s/g, '' ) === c ) {
+    console.log( chalk.green( a + ' is a palindrome (ignore spaces)' ));
+  } else {
+    console.log( chalk.red( a + ' is a NOT palindrome (ignore spaces)' ));
+  }
 };
