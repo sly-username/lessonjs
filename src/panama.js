@@ -1,23 +1,22 @@
 'use strict';
 
-var chalk = require( 'chalk' );
+var strict, loose;
+
+strict = function( a ) {
+  var b = a.split( '' ).reverse().join ( '' );
+  return a === b;
+};
+
+loose = function( a ){
+  var c = a.replace( /\s/g, '' ).split( '' ).reverse().join ( '' );
+  return a.replace( /\s/g, '' ) === c;
+};
 
 module.exports = function( a ) {
-  var b = a.split( '' ).reverse().join ( '' ),
-    c = a.replace( /\s/g, '' ).split( '' ).reverse().join ( '' );
+  return {
+    input: a,
+    strict: strict( a ),
+    loose: loose( a )
+  };
 
-  console.log( '' );
-  console.log( chalk.cyan.bold( a ));
-
-  if ( a === b ) {
-    console.log( chalk.green( a + ' is a palindrome (strict)' ));
-  } else {
-    console.log( chalk.red.strikethrough( a ) + chalk.red( ' is NOT a palindrome (strict)' ));
-  }
-
-  if ( a.replace( /\s/g, '' ) === c ) {
-    console.log( chalk.green( a + ' is a palindrome (ignore spaces)' ));
-  } else {
-    console.log( chalk.red.strikethrough( a ) + chalk.red( ' is a NOT palindrome (ignore spaces)' ));
-  }
 };
