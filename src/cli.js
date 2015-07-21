@@ -1,30 +1,28 @@
 'use strict';
 
 var
-  panama = require('./panama' ),
-  inputsArray = process.argv.slice( 2 ),
+  colorize,
   chalk = require( 'chalk' ),
-  colorize = function() {
+  panama = require('./panama' );
 
-    console.log( '' );
-    console.log( chalk.cyan.bold( a ));
+colorize = function( result ) {
 
-    if ( a === b ) {
-      console.log( chalk.green( a + ' is a palindrome (strict)' ));
-    } else {
-      console.log( chalk.red.strikethrough( a ) + chalk.red( ' is NOT a palindrome (strict)' ));
-    }
+  console.log( '' );
+  console.log( chalk.cyan.bold( result.input ));
 
-    if ( a.replace( /\s/g, '' ) === c ) {
-      console.log( chalk.green( a + ' is a palindrome (ignore spaces)' ));
-    } else {
-      console.log( chalk.red.strikethrough( a ) + chalk.red( ' is a NOT palindrome (ignore spaces)' ));
-    }
-  };
+  if ( result.strict ) {
+    console.log( chalk.green( result.input + ' is a palindrome (strict)' ));
+  } else {
+    console.log( chalk.red.strikethrough( result.input ) + chalk.red( ' is NOT a palindrome (strict)' ));
+  }
 
-inputsArray.forEach( function( input ) {
-  return panama( input );
-});
+  if ( result.loose ) {
+    console.log( chalk.green( result.input + ' is a palindrome (ignore spaces)' ));
+  } else {
+    console.log( chalk.red.strikethrough( result.input ) + chalk.red( ' is a NOT palindrome (ignore spaces)' ));
+  }
+
+};
 
 module.exports = function( inputsArray ) {
   var results = inputsArray.map( panama );

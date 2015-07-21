@@ -1,7 +1,7 @@
 var
   results,
-  toTest = [ 'abba', 'ab bba', 'racecar', '0101' ],
-  panama = require( './src/panama.js' );
+  toTest = [ 'abba', 'ab bba', 'racecar', '0101', 'a man a plan a canal panama' ],
+  panama = require( '../src/panama.js' );
 
 results = toTest.map( panama );
 
