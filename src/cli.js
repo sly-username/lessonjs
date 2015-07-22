@@ -11,15 +11,15 @@ colorize = function( result ) {
   console.log( chalk.cyan.bold( result.input ));
 
   if ( result.strict ) {
-    console.log( chalk.green( result.input + ' is a palindrome (strict)' ));
+  console.log( chalk.green( result.input + ' is a palindrome (strict)' ));
   } else {
-    console.log( chalk.red.strikethrough( result.input ) + chalk.red( ' is NOT a palindrome (strict)' ));
+  console.log( chalk.red.strikethrough( result.input ) + chalk.red( ' is NOT a palindrome (strict)' ));
   }
 
   if ( result.loose ) {
-    console.log( chalk.green( result.input + ' is a palindrome (ignore spaces)' ));
+  console.log( chalk.green( result.input + ' is a palindrome (ignore spaces)' ));
   } else {
-    console.log( chalk.red.strikethrough( result.input ) + chalk.red( ' is a NOT palindrome (ignore spaces)' ));
+  console.log( chalk.red.strikethrough( result.input ) + chalk.red( ' is a NOT palindrome (ignore spaces)' ));
   }
 
 };
