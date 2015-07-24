@@ -1,0 +1,24 @@
+{
+  "name": "lesson-js",
+  "version": "0.0.1",
+  "private": true,
+  "description": "let us learn javascript",
+  "main": "index.js",
+  "config": {
+    "port": 1551
+  },
+  "scripts": {
+    "test": "tape 'tests/**/*.js' | faucet",
+    "lint": "eslint . || echo 'oh no lint errors :('",
+    "start": "node cluster.js -p $npm_package_config_port"
+  },
+  "author": "",
+  "devDependencies": {
+    "eslint": "^0.24.0",
+    "faucet": "0.0.1",
+    "tape": "^4.0.1"
+  },
+  "dependencies": {
+    "chalk": "^1.1.0"
+  }
+}
